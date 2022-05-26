@@ -119,10 +119,7 @@ nav,
 .transp span:hover,
 .transp span:focus {
     color: var(--accent-color);
-}
-
-.email:hover .contacts-icon {
-    fill: var(--accent-color);
+    fill:var(--accent-color)
 }
 
 header.conteiner {
@@ -207,9 +204,17 @@ header.conteiner {
 
 /* section */
 
-.section-title-hidden {
-    height: 0;
-    opacity: 0;
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 .section-title {
@@ -240,8 +245,20 @@ header.conteiner {
 }
 
 .advantages-items {
+    font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+}
+
+.advant-image {
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+}
+
+.advant-icon{
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
 }
 
 .section.doing {
@@ -292,8 +309,7 @@ header.conteiner {
     margin-right: 30px;
 }
 
-.photo,
-.position {
+.photo {
     margin-bottom: 30px;
 }
 
@@ -301,12 +317,90 @@ header.conteiner {
     margin-bottom: 10px;
 }
 
+.social-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    fill: #AFB1B8;
+    margin: 16px 32px 30px 32px;
+}
+
+.social-icon svg
+ {
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+}
+
+.social-icon:not(:last-child){
+    margin-right: 10px;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+    fill: #FFFFFF;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+/* clients */
+
+.clients h2 {
+font-weight: 700;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+letter-spacing: 0.03em;
+margin-bottom: 50px;
+}
+
+.regular-clients {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.client-card:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client-link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: #AFB1B8;
+}
+
+.client-link svg {
+    fill: currentColor;
+}
+
+.client-link:hover,
+.client-link:focus {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    color: var(--accent-color);
+}
+
 /* potfolio */
 
-h1.hidden {
-    height: 0;
-    opacity: 0;
-}
+h1.hidden  {
+     position: absolute;
+     white-space: nowrap;
+     width: 1px;
+     height: 1px;
+     overflow: hidden;
+     border: 0;
+     padding: 0;
+     clip: rect(0 0 0 0);
+     clip-path: inset(50%);
+     margin: -1px;
+ }
 
 /* button */
 
@@ -396,6 +490,8 @@ h1.hidden {
 
 .adress .container {
     padding-top: 60px;
+    display: flex;
+    align-items: baseline;
 }
 
 .logo.footer {
@@ -413,4 +509,35 @@ footer .contacts {
 
 .contacts-item:not(:last-child) {
     margin-bottom: 9px;
+}
+
+.contacts.list {
+    margin-right: 70px;
+}
+
+.container h3 {
+    text-transform:uppercase;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+}
+
+.social-footer {
+    width: 206px;
+    height: 80px;
+}
+
+.social-links.footer {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+footer .social-icon{
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    fill: #FFFFFF;
+    border-radius: 50%;
 }
